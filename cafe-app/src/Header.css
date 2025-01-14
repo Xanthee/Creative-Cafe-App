@@ -1,0 +1,54 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }  
+
+/* Making sure the 'animated' element stays inline and behaves with the corresponding element. */
+.left-nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+/* The animation */
+.left-nav-link::after {
+    content: ''; /* Creating empty element. */
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* Making the underline width 0 so it's invisible to us. */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right; /* Sets the underline animation position to the other corner. */
+    transition: transform 0.25s ease-out;
+}
+
+/* When cursor is hovering */
+.left-nav-link:hover::after {
+    transform: scaleX(1); /* Width is then set to 1. */
+    transform-origin: bottom left; /* Makes it so the animation starts on the left. */
+}
+
+.right-nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 20px;
+}
+
+.right-nav-link:hover {
+background-color:   #DAE9DE;
+    color: black;
+}
+
+.letter-spacing {
+    letter-spacing: .4rem;
+}
