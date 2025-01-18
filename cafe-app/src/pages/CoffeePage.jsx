@@ -31,7 +31,13 @@ export default function CoffeePage(){
             </div>
 
             <div className="mt-10 relative w-full h-[50vh]">
-                <img src={Banner} className="absolute inset-0 w-full h-full object-cover" ></img>
+                <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src={Banner}
+                    autoPlay
+                    loop
+                    muted
+                ></video>
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="text-center text-white p-4">
                         <p className="text-lg">OUR HISTORY</p>
@@ -41,13 +47,13 @@ export default function CoffeePage(){
             </div>
 
             <div className="flex flex-row justify-evenly w-full bg-[#c1dbce] p-12">
-                    <div className="p-12 flex flex-col justify-center text-right">
-                        <p className="mb-4">Brian Moynihan is the visionary founder and CEO of LUNA Coffee. In 2012, with a dream and a passion for coffee, he transformed an old bookstore in Notting Hill into the very first LUNA Coffee shop. Initially a cozy nook for book lovers and coffee enthusiasts alike, LUNA Coffee quickly evolved into a vibrant space known for its serene daytime ambiance and chic evening atmosphere. </p>
-                        <p>Over the past decade, LUNA Coffee has emerged as a leading coffee brand in the UK. With fifteen locations across London, a thriving online business serving an ever-growing customer base worldwide, and LUNA Coffee beans, cold brews, and coffee capsules now available in most major UK grocery stores, the brand's footprint is unmistakable. LUNA Coffee is also the exclusive coffee provider for The Savoy Hotel, and collaborates with industry giants like Minor Figures and BrewDog to deliver exceptional coffee experiences.</p>
+                    <div className="p-12 text-xl flex flex-col justify-center text-leftr">
+                        <p className="mb-4">The journey of coffee, stretching back centuries, is steeped in rich traditions and tales. Originating from the ancient coffee forests of Ethiopia, legend has it that a goat herder named Kaldi first discovered the potential of these beloved beans. By the 15th century, coffee spread to the Arabian Peninsula, cultivating a rich coffee culture that permeated Yemen, Egypt, and the Ottoman Empire. Cafés, or "qahveh khaneh," became vibrant social hubs where conversations flowed as freely as the coffee. Fast forward to the modern day, Luna Café carries on this legacy, offering its patrons a sanctuary to savor fine brews and gather with friends, continuing a tradition centuries in the making. </p>
+                        <p>Luna Café is committed not just to great coffee but also to the planet. By sourcing beans from sustainable farms that use eco-friendly practices, they ensure that their coffee cultivation has a minimal environmental footprint. Organic farming methods enrich the soil and maintain biodiversity, while fair trade ensures that farmers receive fair wages, promoting social equity and community development. Luna Café's dedication to sustainability means that every cup of coffee not only delights the taste buds but also contributes to a greener, fairer world. Sip by sip, Luna Café's patrons are helping to support practices that prioritize the health of our environment.</p>
                     </div>
             </div>
-            <h1>BUT WE DONT STOP THERE.</h1>
-            <p>Our coffee cups are also fully biodegradable, meaning they break down naturally and leave no harmful residues. This approach helps to minimize waste and reduce the environmental footprint of our cafe operations.</p>
+            <h1 className="m-12 text-4xl font-bold text-center text-white">BUT WE DONT STOP THERE.</h1>
+            <p className="mb-12 pl-12 pr-12  text-2xl leading-loose text-white tracking-wider font-extralight text-center">Our coffee cups are also fully biodegradable, meaning they break down naturally and leave no harmful residues. This approach helps to minimize waste and reduce the environmental footprint of our cafe operations.</p>
         </div>
 
     );
