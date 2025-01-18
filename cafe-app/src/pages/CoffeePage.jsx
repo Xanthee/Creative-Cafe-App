@@ -53,7 +53,7 @@ export default function CoffeePage(){
                     </div>
             </div>
             <h1 className="m-12 text-4xl font-bold text-center text-white">BUT WE DONT STOP THERE.</h1>
-            <p className="mb-12 pl-12 pr-12  text-2xl leading-loose text-white tracking-wider font-extralight text-center">Our coffee cups are also fully biodegradable, meaning they break down naturally and leave no harmful residues. This approach helps to minimize waste and reduce the environmental footprint of our cafe operations.</p>
+            <p className="mb-12 pl-12 pr-12 text-2xl leading-loose text-white tracking-wider font-extralight text-center">Our coffee cups are also fully biodegradable, meaning they break down naturally and leave no harmful residues. This approach helps to minimize waste and reduce the environmental footprint of our cafe operations.</p>
         </div>
 
     );
