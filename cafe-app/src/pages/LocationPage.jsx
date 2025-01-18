@@ -1,52 +1,18 @@
-import { Link } from "react-router-dom"
-import React from 'react'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 
-const containerStyle = {
-    width: '400px',
-    height: '400px',
-}
-  
-const center = {
-    lat: -3.745,
-    lng: -38.523,
-}
-  
-function MyComponent() {
-    const { isLoaded } = useJsApiLoader({
-      id: 'google-map-script',
-      googleMapsApiKey: 'YOUR_API_KEY',
-})
-  
-const [map, setMap] = React.useState(null)
-  
-const onLoad = React.useCallback(function callback(map) {
-      // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    const bounds = new window.google.maps.LatLngBounds(center)
-    map.fitBounds(bounds)
-  
-    setMap(map)
-}, [])
-  
-const onUnmount = React.useCallback(function callback(map) {
-    setMap(null)
-}, [])
-  
-return isLoaded ? (
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={10}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        {/* Child components, such as markers, info windows, etc. */}
-        <></>
-      </GoogleMap>
-    ) : (
-      <></>
-    )
-}
-  
-export default React.memo(MyComponent)
+import React from 'react';
+import SimpleMap from '../components/Map.jsx';
 
+
+const LocationPage = () => {
+  return (
+    <div className="flex flex-col w-full h-full bg-[#24402E]">
+      <div className="mt-40">
+        <h1 className="text-4xl mb-2 letter-spacing text-white text-center mb-20 underline underline-offset-8">OUR LOCATION</h1>
+        <SimpleMap />
+        
+      </div>
+    </div>
+  );
+};
+
+export default LocationPage;
