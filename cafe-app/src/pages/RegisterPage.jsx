@@ -10,6 +10,7 @@ function RegisterPage() {
 
 
     
+ 
     function registerUser(e) {
         console.log(username)
         e.preventDefault();
@@ -17,7 +18,9 @@ function RegisterPage() {
             username: username,
             email: email,
             password: password,
-        })
+        },
+            { withCredentials: true } // Include cookies
+        )
             .then(result => console.log("res",result))
             .catch(err => console.log("error",err));
     }

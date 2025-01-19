@@ -11,7 +11,7 @@ export default function LoginPage(){
         axios.post('http://127.0.0.1:5000/login', {
             email: email,
             password: password,
-        })
+        }, { withCredentials: true })
             .then(result => console.log("res",result))
             .catch(err => console.log("error",err));
     }
