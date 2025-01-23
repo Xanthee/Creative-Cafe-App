@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 
-const Map = () => {
-  useEffect(() => {
-    const loadMap = () => {
+const Map = () => { // Function component that displays Google Map with a marker
+  useEffect(() => { // Hook used to run code that loads Google Maps script + initialise the map [ONLY RUNS ONCE COMPONENT MOUNTS]
+    const loadMap = () => { // Checks if Google Maps script is already loaded
       if (!document.querySelector(`script[src*="maps.googleapis.com"]`)) {
         const script = document.createElement('script');
         script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&callback=initMap`;
@@ -17,8 +17,7 @@ const Map = () => {
         center: { lat: 50.787109, lng: -1.124131 },
         zoom: 15,
       });
-
-      // Add a marker at 13 James Lind Avenue, PO12 2FB
+      // Adding a marker
       new google.maps.Marker({
         position: { lat: 50.787109, lng: -1.124131 },
         map: map,

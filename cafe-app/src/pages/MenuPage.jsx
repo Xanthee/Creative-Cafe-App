@@ -7,7 +7,7 @@ export default function MenuPage() {
             <div className="flex flex-col mt-32 text-[#c1dbce]">
                 <h3 className="text-center letter-spacing mb-6 font-bold text-3xl mt-10">HAVE A LOOK AT OUR</h3>
                 <h1 className="text-center letter-spacing font-bold text-5xl text-white mb-10">M E N U</h1>
-                <Menu />
+                <Menu /> {/* Imported Menu component */}
             </div>
         </div>
     );

@@ -1,14 +1,11 @@
 import React from 'react';
 import Food from '../assets/CafeFood.jpeg';
 import Farmer from '../assets/Farmer.jpeg';
-
 import Banner from '../assets/ForestBanner.mp4';
-
 
 export default function CoffeePage(){
     return (
-        <div className=" relative flex flex-col w-full h-full bg-[#4a4342]">
-            
+        <div className=" relative flex flex-col w-full h-full bg-[#4a4342]">  
             <div className="mt-10 relative w-full h-[65vh]">
                 <img src={Food} className="absolute inset-0 w-full h-full object-cover" ></img>
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -29,7 +26,6 @@ export default function CoffeePage(){
                     </div>
                 </div>
             </div>
-
             <div className="mt-10 relative w-full h-[50vh]">
                 <video
                     className="absolute inset-0 w-full h-full object-cover"
@@ -45,7 +41,6 @@ export default function CoffeePage(){
                     </div>
                 </div>
             </div>
-
             <div className="flex flex-row justify-evenly w-full bg-[#c1dbce] p-12">
                     <div className="p-12 text-xl flex flex-col justify-center text-leftr">
                         <p className="mb-4">The journey of coffee, stretching back centuries, is steeped in rich traditions and tales. Originating from the ancient coffee forests of Ethiopia, legend has it that a goat herder named Kaldi first discovered the potential of these beloved beans. By the 15th century, coffee spread to the Arabian Peninsula, cultivating a rich coffee culture that permeated Yemen, Egypt, and the Ottoman Empire. Cafés, or "qahveh khaneh," became vibrant social hubs where conversations flowed as freely as the coffee. Fast forward to the modern day, Luna Café carries on this legacy, offering its patrons a sanctuary to savor fine brews and gather with friends, continuing a tradition centuries in the making. </p>
@@ -55,6 +50,5 @@ export default function CoffeePage(){
             <h1 className="m-12 text-4xl font-bold text-center text-white">BUT WE DONT STOP THERE.</h1>
             <p className="mb-12 pl-12 pr-12 text-2xl leading-loose text-white tracking-wider font-extralight text-center">Our coffee cups are also fully biodegradable, meaning they break down naturally and leave no harmful residues. This approach helps to minimize waste and reduce the environmental footprint of our cafe operations.</p>
         </div>
-
     );
 }

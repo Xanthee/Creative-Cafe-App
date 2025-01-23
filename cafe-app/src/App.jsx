@@ -1,4 +1,3 @@
-import './App.css'
 import {Route, Routes} from "react-router-dom";
 import IndexPage from "./pages/IndexPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
@@ -9,19 +8,17 @@ import AboutPage from "./pages/AboutPage.jsx";
 import BookPage from "./pages/BookingPage.jsx";
 import CoffeePage from "./pages/CoffeePage.jsx";
 
-
-
 import Layout from "./Layout";
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://127.0.0.1:3000";
+axios.defaults.baseURL = "http://127.0.0.1:3000"; // Settings a default base URL for Axious HTTP requests
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index path="/home" element={<IndexPage />}/>
-        <Route path="/menu" element={<MenuPage />} />
+    <Routes> {/* Defining a routing structure */}
+      <Route path="/" element={<Layout />}> {/* Creating nested component */}
+        <Route index path="/home" element={<IndexPage />}/> {/* Inside the Layout, we have several child routes */}
+        <Route path="/menu" element={<MenuPage />} /> 
         <Route path="/book" element={<BookPage />} />
         <Route path="/coffee" element={<CoffeePage />} />
         <Route path="/about" element={<AboutPage />} />

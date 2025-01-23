@@ -47,7 +47,6 @@ export default function AboutPage() {
                     </div>
                 </div>
             </div>
-
             <div className="mt-10 relative w-full h-[50vh]">
                 <img src={Banner} className="absolute inset-0 w-full h-full object-cover" ></img>
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -57,9 +56,7 @@ export default function AboutPage() {
                     </div>
                 </div>
             </div>
-
             <p className="p-12 text-2xl leading-loose text-white tracking-wider font-extralight text-center">This endeavor marks a significant chapter in our journey as a coffee company. We are dedicated to transforming the way we enjoy our daily brew. As passionate coffee lovers, we've realized the importance of savoring every cup with a clear conscience. Our mission goes beyond just a beverage; it's about fostering a more ethical and sustainable approach to coffee consumption.</p>
-
             <div className="flex flex-row justify-center h-[34rem] mb-24 font-light text-3xl text-white leading-snug" >
                 <div className="relative m-4 w-3/12 h-full bg-cover bg-center" style={{ backgroundImage: `url(${FirstCafe})` }}>
                     <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -67,14 +64,12 @@ export default function AboutPage() {
                         <h1 className="fmt-12 mb-4 ">2012: The first LUNA cafe in Bristol.</h1>
                     </div>
                 </div>
-
                 <div className="relative m-4 w-3/12 h-full bg-cover bg-center" style={{ backgroundImage: `url(${SecondCafe})` }}>
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="relative z-10 flex flex-col items-start justify-end w-3/4 h-full p-6 pb-16">
                         <h1 className="fmt-12 mb-4 ">2014: Over 15 cafes across the UK.</h1>
                     </div>             
                 </div>
-
                 <div className="relative m-4 w-3/12 h-full bg-cover bg-center" style={{ backgroundImage: `url(${Food})` }}>
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="relative z-10 flex flex-col items-start justify-end w-3/4 h-full p-6 pb-16">

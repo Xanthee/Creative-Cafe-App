@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import * as React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faDiscord } from '@fortawesome/free-brands-svg-icons'; // Imported icons
 
 export default function Footer() {
     return (
@@ -26,7 +26,6 @@ export default function Footer() {
                     <p>Student discount</p>
                     <p>Keyworker discount</p>
                     <p>Over 60s discount</p>
-
                     <h3 className="font-semibold text-xl mt-4">HELP</h3>
                     <p>Take a look at our FAQs</p>
                     <p>Something else? Get in touch.</p>
@@ -36,7 +35,6 @@ export default function Footer() {
                     <p>All enquiries: lunacafe@gmail.com</p>
                     <p>PR: luna@emergelimited.co.uk</p>
                     <p>Contact number: +44 07583 330497</p>
-
                     <h3 className="mt-6 font-semibold text-xl">FOLLOW US</h3>
                     <div className="flex flex-row mt-4">
                         <FontAwesomeIcon className="pr-4" icon={faFacebook} size="2xl" style={{color: "#ffffff",}} />
