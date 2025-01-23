@@ -7,9 +7,9 @@ import Blend4 from '../assets/Blend4.png';
 import Blend5 from '../assets/Blend5.png';
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [transitioning, setTransitioning] = useState(false);
-
+  const [activeTab, setActiveTab] = useState(0); // Tracking current active tab
+  const [transitioning, setTransitioning] = useState(false); // Tracking if a tab transition is happening. Works well when opacity transitions!
+  // Table of contents array 
   const tabContent = [
     { id: 0, title: "HOUSE", subHeader: "DOUBLE-ORIGIN : MEXICO & BRAZIL", header: "HOUSE BLEND", info: 'Our House Blend is a perfect symphony of flavors, crafted from a carefully curated selection of premium beans from Mexico and Brazil. This medium roast boasts a rich, full-bodied taste with notes of caramel, chocolate, and a hint of citrus, making it the perfect all-day coffee. Ideal for both espresso and drip brewing methods, our House Blend is designed to delight your senses and provide a comforting, satisfying cup with every sip.', intensity: '5/10', notes:'Caramel, chocolate and citrus undertones.', image: Blend1 },
     { id: 1, title: "LIGHT", subHeader: "ROBUSTA : WEST AFRICA", header: " LIGHT BLEND", info: "Our Light Blend hails from the rich, fertile soils of West America. This unique blend combines the best of robusta beans to create a delightful and invigorating cup. Perfectly roasted to highlight its natural flavors, this blend features a light body and a complex profile with deep, rich dark chocolate notes that will captivate your senses. Ideal for those who appreciate a nuanced and aromatic coffee experience, our Light Blend is crafted to provide a refreshing and satisfying drink with every sip.", intensity: "6/10", notes: "Dark chocolate notes.", image: Blend2 },
@@ -19,9 +19,9 @@ const Tabs = () => {
   ];
 
   const handleTabClick = (index) => {
-    if (index !== activeTab) {
+    if (index !== activeTab) { // If clicked tab is NOT the current active tab, it sets the Transitioning state to 'true' and causes transition
       setTransitioning(true);
-      setTimeout(() => {
+      setTimeout(() => { // Else after 300ms, it updates the activeTab state to the clicked tab's index and sets Transitioning to 'false'
         setActiveTab(index);
         setTransitioning(false);
       }, 300); // Transition duration in ms

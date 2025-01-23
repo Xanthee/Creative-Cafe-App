@@ -4,7 +4,7 @@ import Sandwich from '../assets/Sandwich.jpeg';
 import Pastry from '../assets/Pastry.jpeg';
 import Coffee from '../assets/Coffee.jpeg';
 
-const Menu = () => {
+const Menu = () => { // THE SAME AS TABS.JSX - CHECK FOR COMMENTS
   const [activeTab, setActiveTab] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
 

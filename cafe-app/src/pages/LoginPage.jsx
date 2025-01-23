@@ -9,15 +9,14 @@ export default function LoginPage(){
 
     function loginUser(e) {
         e.preventDefault();
-        axios.post('http://127.0.0.1:5000/login', {
+        axios.post('http://127.0.0.1:5000/login', { /* Sending POST request to link with email and password from the state. */
             email: email,
             password: password,
-        }, { withCredentials: true })
-            .then(result => console.log("res",result))
+        }, { withCredentials: true }) // Ensure cookies are included in the request.
+            .then(result => console.log("res",result)) // Response handling.
             .catch(err => console.log("error",err));
     }
     return (
-
 
         <div className="flex flex-col w-full h-full bg-[#24402E]">
             <div className="flex flex-row justify-around ml-24 mt-40 p-20">

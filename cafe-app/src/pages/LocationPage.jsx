@@ -1,7 +1,6 @@
 import React from 'react';
 import SimpleMap from '../components/Map.jsx';
 
-
 const LocationPage = () => {
   return (
     <div className="flex flex-col w-full h-full bg-[#24402E]">

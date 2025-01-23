@@ -3,16 +3,16 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css'
 
-
+// 'Reviews' array
 const reviews = [
     {id: 1, name: 'Ted', rating: 5, text: 'Absolutely loved my visit to this café! The coffee was delightful—perfectly brewed and full of rich flavors. The ambiance is just fantastic, creating such a warm and inviting vibe. Its the ideal spot to relax, catch up with friends, or even get some work done. Highly recommend.'},
     {id: 2, name: 'Bucky', rating: 4, text: 'I was particularly impressed by the variety of vegan food options available. Its so refreshing to find a place that caters to everyones dietary preferences without compromising on taste.'},
     {id: 3, name: 'Eddie', rating: 5, text: 'My experience at this café was nothing short of exceptional! The coffee and food were fantastic, but what truly stood out was the stellar customer service. The staff were incredibly attentive, friendly, and made me feel right at home from the moment I walked in.'},
 ];
 
-const ReviewSlider = () => {
+const ReviewSlider = () => { // This is just stuff that can be added to the slider
     const settings = {
-        dots: true,
+        dots: true, // dots on the bottom
         infinite: true,
         speed: 500,
         slidesToShow: 1,
