@@ -1,11 +1,19 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import PeopleTalking from '../assets/Talking.mp4';
-import Barista from '../assets/Barista.mp4';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { useState } from "react";
 
+export default function BookingPage() {
+    const [startDate, setStartDate] = useState(new Date());
 
-export default function BookingsPage(){
+    const handleSubmit = () => {
+        console.log("Selected Date and Time:", startDate);  // Store the selected date and time
+        // STORE INTO DB
+    };
+
     return (
-        <div className=" relative flex flex-col w-full h-full bg-[#4a4342]">
+        <div className="relative flex flex-col w-full h-full bg-[#4a4342]">
             <div className="mt-40 relative w-full h-[50vh]">
                 <video
                     className="absolute inset-0 w-full h-full object-cover"
@@ -21,10 +29,26 @@ export default function BookingsPage(){
                     </div>
                 </div>
             </div>
-            <div>
-                <h1>HELLO</h1>
+            <div className="flex flex-col w-auto h-auto ">
+                <p className="p-12 text-2xl leading-loose text-white tracking-wider font-extralight text-center">Book a table online and we'll have it ready for you.</p>
+                <div className="flex flex-col items-center justify-evenly  w-full bg-[#c1dbce] p-12 h-96">
+                    <label className="text-4xl font-light mb-2 letter-spacing">Select Date and Time</label>
+                    <DatePicker
+                        className="w-64 p-2 border-2 border-gray-300 rounded focus:border-blue-500 focus:ring focus:ring-blue-200"
+                        placeholder="Select a"
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        showTimeSelect
+                        dateFormat="Pp"
+                    />
+                    <button
+                        className="right-nav-link font-bold text-xl text-black mr-4 px-3 py-1 border border-white border-2 w-52 h-12 flex flex-col items-center justify-center"
+                        onClick={handleSubmit}
+                    >
+                        Reserve Table
+                    </button>
+                </div>
             </div>
-         
         </div>
     );
 }
