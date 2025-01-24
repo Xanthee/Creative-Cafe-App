@@ -13,8 +13,13 @@ const userSchema = new mongoose.Schema({ // Schema
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true }
 });
-
+const bookingSchema = new mongoose.Schema({
+  username: { type: String, required: true },
+  startDate: { type: Date, required: true },
+  // You can add any other fields you need, like booking id, status, etc.
+});
 const User = mongoose.model('User', userSchema); // Creates model nased on schema above, interacts with DB
+const Booking = mongoose.model('Booking', bookingSchema);  // Define the Booking model
 
 mongoose // MongoDB connected using URI
   .connect(process.env.MONGO_URI)
@@ -47,8 +52,8 @@ mongoose // MongoDB connected using URI
         } // Create a new user
         const newUser = new User({ username, email, password });
         const savedUser = await newUser.save();
-        req.session.userId = newUser.username; // Sets userID to the new users username
-        res.status(201).json({ // Sends success response
+        req.session.userId = newUser.username; 
+        res.status(201).json({ 
           message: 'User registered successfully!',
           username: newUser.username,
         });
@@ -70,8 +75,8 @@ mongoose // MongoDB connected using URI
         if (user.password !== password) { 
           return res.status(401).json({ message: 'Invalid credentials.' });
         }
-        req.session.userId = user.username; // Sets userID to the users username
-        res.status(200).json({ // Sends success response
+        req.session.userId = user.username;
+        res.status(200).json({ 
           message: 'Login successful!',
           username: user.username,
         });
@@ -81,6 +86,26 @@ mongoose // MongoDB connected using URI
         res.status(500).json({ message: 'Internal server error.' });
       }
     });
+    app.post('/booking', async (req, res) => {
+      try {
+          const { startDate } = req.body;  
+          console.log('Session userId:', req.session.userId);
+
+          const username = req.session.userId;  // Assuming the username is stored in the session
+
+          const newBooking = new Booking({
+            username: username,  
+              startDate: startDate,  
+          });
+  
+          await newBooking.save();
+          console.log('booking', newBooking);
+          res.status(201).json({ message: 'Booking successful', booking: newBooking });
+      } catch (err) {
+          console.error('Error saving booking:', err);
+          res.status(500).json({ error: 'Error saving booking' });
+      }
+  });
 
     app.listen(5000, () => {
       console.log('Server running on http://127.0.0.1:5000'); // Starts server port

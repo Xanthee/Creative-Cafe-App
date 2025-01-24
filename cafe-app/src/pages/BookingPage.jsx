@@ -3,13 +3,26 @@ import PeopleTalking from '../assets/Talking.mp4';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useState } from "react";
-
+import axios from 'axios';
 export default function BookingPage() {
     const [startDate, setStartDate] = useState(new Date());
 
-    const handleSubmit = () => {
-        console.log("Selected Date and Time:", startDate);  // Store the selected date and time
-        // STORE INTO DB
+    const handleSubmit = async () => {
+        try {
+            // Convert date to ISO format (UTC)
+            const formattedDate = startDate.toISOString();
+
+            // Send a POST request to the backend to store the booking
+            const response = await axios.post('http://127.0.0.1:5000/booking', { startDate: formattedDate },
+                {withCredentials: true}  
+
+            );
+
+            // Handle successful booking (maybe show a confirmation message)
+            console.log('Booking successful:', response.data);
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     return (
