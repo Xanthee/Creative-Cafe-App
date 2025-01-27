@@ -13,3 +13,16 @@ I will use TailwindCSS and vite in my React to help make the UI look more appeal
 For the booking database, I will be using MongoDB to store my bookings and user login information.
 
 Ive used cors and MONGODB for my database 
+
+
+IMPORTANT NOTE:
+
+You will need to install the PostCSS language support extension to visual studio - This fixes certain errors with npm install
+
+to run code:
+
+cd cafe-app
+
+npm install
+
+npm run dev
