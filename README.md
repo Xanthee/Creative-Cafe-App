@@ -8,8 +8,8 @@ For the tech stack, I will be using MERN as I believe React will very flexible a
 
 The UI for this app will a modern touch on old sophistication bringing coffee lovers and enthusiasts together.
 
-I may also use TailwindCSS and vite in my React to help make the UI look more appealing to the user and more efficient.
+I will use TailwindCSS and vite in my React to help make the UI look more appealing to the user and more efficient.
 
-For the booking database, i will be using this tutorial https://www.geeksforgeeks.org/restaurant-reservation-system-using-mern-stack/ and change it to be more according to my app.
+For the booking database, I will be using MongoDB to store my bookings and user login information.
 
 Ive used cors and MONGODB for my database 
